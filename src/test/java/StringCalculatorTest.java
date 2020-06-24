@@ -23,4 +23,10 @@ public class StringCalculatorTest {
         assertEquals("3", result);
     }
 
+    @Test
+    public void testSumOf2Values() {
+        String result = stringCalculator.add("10,20");
+        assertEquals("30", result);
+    }
+
 }
