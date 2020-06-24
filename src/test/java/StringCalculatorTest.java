@@ -33,5 +33,13 @@ public class StringCalculatorTest {
         String result = stringCalculator.add("1\n2");
         assertEquals("3", result);
     }
-    
+
+    @Test
+    public void testSumOf3Values() {
+        String result = stringCalculator.add("10,20,40");
+        assertEquals("70", result);
+        String resultByNewline = stringCalculator.add("10\n20\n40");
+        assertEquals("70", resultByNewline);
+    }
+
 }
