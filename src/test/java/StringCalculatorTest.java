@@ -16,7 +16,6 @@ public class StringCalculatorTest {
         assertEquals("0", result);
     }
 
-
     @Test
     public void testSingleInputReturnsSameValue() {
         String result = stringCalculator.add("3");
@@ -29,4 +28,10 @@ public class StringCalculatorTest {
         assertEquals("30", result);
     }
 
+    @Test
+    public void testSumOfNewLineSeparatedValues() {
+        String result = stringCalculator.add("1\n2");
+        assertEquals("3", result);
+    }
+    
 }
