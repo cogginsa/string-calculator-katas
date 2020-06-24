@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-24T10:51:46" hostname="PSLL32481" time="0.022">
+<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-24T11:15:27" hostname="PSLL32481" time="0.003">
   <properties/>
-  <testcase name="testEmptyReturnsZero" classname="StringCalculatorTest" time="0.022"/>
+  <testcase name="testEmptyReturnsZero" classname="StringCalculatorTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
