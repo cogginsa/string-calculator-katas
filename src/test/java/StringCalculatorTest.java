@@ -42,4 +42,10 @@ public class StringCalculatorTest {
         assertEquals("70", resultByNewline);
     }
 
+    @Test(expected=NegativeNumberException.class)
+    public void testNegativeNumbersException() throws Exception {
+        String result = stringCalculator.add("-1,2,-3");
+        assertEquals("0", result);
+    }
+
 }
