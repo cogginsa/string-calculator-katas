@@ -5,7 +5,9 @@ public class StringCalculator{
 
         int sum = 0;
         for (String value : strArray) {
-            sum += Integer.parseInt(value);
+            if(!value.isEmpty()){
+                sum += Integer.parseInt(value);
+            }
         }
         return Integer.toString(sum);
     }
