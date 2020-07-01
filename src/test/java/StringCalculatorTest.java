@@ -24,4 +24,10 @@ public class StringCalculatorTest {
         String result = stringCalculator.add("1,2");
         assertEquals("3", result);
     }
+
+    @Test
+    public void testSplitByNewline(){
+        String result = stringCalculator.add("3\n4");
+        assertEquals("7", result);
+    }
 }
