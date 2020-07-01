@@ -18,4 +18,10 @@ public class StringCalculatorTest {
         String result = stringCalculator.add("1");
         assertEquals("1", result);
     }
+
+    @Test
+    public void testReturnsSum(){
+        String result = stringCalculator.add("1,2");
+        assertEquals("3", result);
+    }
 }
