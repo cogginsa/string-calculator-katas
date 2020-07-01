@@ -12,4 +12,10 @@ public class StringCalculatorTest {
         String result = stringCalculator.add("");
         assertEquals("0", result);
     }
+
+    @Test
+    public void testSingleInput(){
+        String result = stringCalculator.add("1");
+        assertEquals("1", result);
+    }
 }
