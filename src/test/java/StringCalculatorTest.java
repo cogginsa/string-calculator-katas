@@ -30,4 +30,11 @@ public class StringCalculatorTest {
         String result = stringCalculator.add("3\n4");
         assertEquals("7", result);
     }
+
+    @Test
+    public void testSplitByNewlineAndComma(){
+        String result = stringCalculator.add("1\n2,3\n4");
+        assertEquals("10", result);
+    }
+
 }
