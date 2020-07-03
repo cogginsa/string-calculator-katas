@@ -37,4 +37,12 @@ public class StringCalculatorTest {
         assertEquals("10", result);
     }
 
+    @Test(expected = NegativeNumberException.class)
+    public void testThrowsException(){
+        String str = "1,-2,-4";
+        String result = stringCalculator.add(str);
+//        assertEquals("1", result);
+
+    }
+
 }
