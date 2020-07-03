@@ -42,10 +42,16 @@ public class StringCalculatorTest {
         assertEquals("70", resultByNewline);
     }
 
-    @Test(expected=NegativeNumberException.class)
-    public void testNegativeNumbersException() throws Exception {
-        String result = stringCalculator.add("-1,2,-3");
-        assertEquals("0", result);
+//    @Test(expected=NegativeNumberException.class)
+//    public void testNegativeNumbersException() throws Exception {
+//        String result = stringCalculator.add("-1,2,-3");
+//        assertEquals("0", result);
+//    }
+
+    @Test
+    public void testNumbersOver1000AreIgnored() {
+        String result = stringCalculator.add("10,20,40,1002");
+        assertEquals("70", result);
     }
 
 }

@@ -6,7 +6,7 @@ public class StringCalculator{
             String[] validatedArray = validateInput(str.split(",|\\\n"));
 
             for (String value : validatedArray) {
-                if(!value.isEmpty()){
+                if(!value.isEmpty() && (Integer.parseInt(value) < 1000)){
                     sum += Integer.parseInt(value);
                 }
             }
