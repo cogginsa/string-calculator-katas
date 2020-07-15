@@ -54,4 +54,10 @@ public class StringCalculatorTest {
         assertEquals("70", result);
     }
 
+    @Test
+    public void testCustomDelimiters() {
+        String result = stringCalculator.add("//#\n1#2");
+        assertEquals("3", result);
+    }
+
 }

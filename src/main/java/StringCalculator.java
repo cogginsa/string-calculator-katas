@@ -1,9 +1,18 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class StringCalculator{
+
+    private String defaultDelimiterRegex = ",|\\\n";
+    private String extractionRegex = "\\/(.)\\\n";
+
 
     public String add(String str){
         int sum = 0;
         try {
-            String[] validatedArray = validateInput(str.split(",|\\\n"));
+            String customDelimiterRegex = getCustomDelimeterRegex(str);
+            String newStr = str.replace("//(.)\\\n", "");
+            String[] validatedArray = validateInput(newStr.split(customDelimiterRegex));
 
             for (String value : validatedArray) {
                 if(!value.isEmpty() && (Integer.parseInt(value) < 1000)){
@@ -30,6 +39,18 @@ public class StringCalculator{
         }
 
         return strArray;
+    }
+
+    public String getCustomDelimeterRegex(String str){
+        System.out.println("custom capture::" );
+
+        Pattern pattern = Pattern.compile(extractionRegex);
+        Matcher matcher = pattern.matcher(str);
+        if (matcher.find())
+        {
+            System.out.println(matcher.group(1));
+            return defaultDelimiterRegex += "|" + matcher.group(1);
+        } else return defaultDelimiterRegex;
     }
 
 }
